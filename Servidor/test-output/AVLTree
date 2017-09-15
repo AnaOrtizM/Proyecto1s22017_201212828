@@ -1,0 +1,10 @@
+digraph G {node[shape=record, height=0.1];
+{ 
+"326"[label="<f0> Izq|<f1>Nombre: dos\nExtension: txt|<f2> Der"]; 
+"326":f0 -> "528":f1 ;
+"528"[label="<f0> Izq|<f1>Nombre: arbol\nExtension: png|<f2> Der"]; 
+"326":f2 -> "420":f1 ;
+"420"[label="<f0> Izq|<f1>Nombre: hola\nExtension: txt|<f2> Der"]; 
+} 
+labelloc="t";
+label=" AVL";}

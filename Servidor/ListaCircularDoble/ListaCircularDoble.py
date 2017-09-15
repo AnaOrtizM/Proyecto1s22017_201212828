@@ -14,7 +14,8 @@ class ListaCircularDoble(object):
 			return True
 		else:
 			return False
-
+#***********************************************************************************#
+#************************************ INSERCIÓN ************************************#
 	def insertar(self, name, password):
 		if len(password) >= 4:
 
@@ -38,7 +39,8 @@ class ListaCircularDoble(object):
 			self.indice += 1
 		else:
 			print (str(name) + " Contraseña no valida. Debe ser mayor a 4 caracteres")
-
+#***********************************************************************************#
+#************************************ BÚSQUEDA *************************************#
 	def buscar(self, name):
 		if self.estaVacia() == True:
 			print ("Lista Circular Vacia")
@@ -52,7 +54,8 @@ class ListaCircularDoble(object):
 				if temp == self.inicio:
 					break
 		return None
-
+#***********************************************************************************#
+#************************************* MOSTRAR *************************************#
 	def mostrar(self):
 		if self.estaVacia() == True:
 			print ("Lista Circular Vacia")
@@ -63,7 +66,8 @@ class ListaCircularDoble(object):
 				temp = temp.siguiente
 				if temp == self.inicio:
 					break
-
+#***********************************************************************************#
+#*********************************** ELIMINACIÓN ***********************************#
 	def eliminar(self, name):
 		if self.estaVacia() == False:
 			temp = self.inicio
@@ -102,7 +106,8 @@ class ListaCircularDoble(object):
 					break
 		else:
 			print ("Lista Circular Vacia")
-
+#***********************************************************************************#
+#*********************************** VERIFICACION **********************************#
 	def verificarUsuario(self, name, password):
 		usuario = self.buscar(name)
 		if (name == usuario.getName()) and ( password == usuario.getPassword()):
@@ -111,7 +116,8 @@ class ListaCircularDoble(object):
 		else:
 			print ("Usuario " + usuario.getName() + " incorrecto")
 			return False
-
+#***********************************************************************************#
+#************************************ GRAFICAR *************************************#
 	def graficar(self):
 		self.grafo = "digraph G {\n" + "node [shape = record,height=.1];  {\n"
 
@@ -142,4 +148,4 @@ class ListaCircularDoble(object):
 		src = Source(self.grafo)
 		src.format = "png"
 		src.render('test-output/ListaCircularDoble', view = True)
-#**************************************************************************#
+#***********************************************************************************#

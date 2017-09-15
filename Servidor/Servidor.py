@@ -2,15 +2,17 @@ from flask import Flask, request, Response
 
 #************ IMPORTACIONES DE CLASES *************#
 from ListaCircularDoble.ListaCircularDoble import ListaCircularDoble
+from AVL.AVL import AVL
 #**************************************************#
 app = Flask('Proyecto1_Servidor')
 
 #************ INSTANCIAMIENTO DE CLASES ***********#
 lcd = ListaCircularDoble()
+avl = AVL()
 #**************************************************#
 
 #********** METODOS LISTA CIRCULAR DOBLE **********#
-lcd.insertar("aom92","aom1792")
+"""lcd.insertar("aom92","aom1792")
 lcd.insertar("jma","jma123")
 lcd.insertar("dc","dc21")
 lcd.insertar("rtda","rtda127")
@@ -20,7 +22,7 @@ lcd.verificarUsuario("aom92", "aom1792")
 lcd.graficar()
 lcd.eliminar("jma")
 lcd.mostrar()
-lcd.graficar()
+lcd.graficar()"""
 """@app.route('/insertarLista',methods=['POST']) 
 #@app.route('/insertarLista') 
 def insertarLista():
@@ -52,9 +54,19 @@ def graficarLista():
 	ls.graficar()
 	return "Lista Graficada" """
 #**************************************************#
-
-#*************** METODOS LISTA DOBLE **************#
-
+#****************** METODOS AVL *******************#
+avl.insertarAVL("hola","txt")
+avl.insertarAVL("arbol","jpg")
+avl.insertarAVL("casa","png")
+avl.insertarAVL("dos","txt")
+avl.enOrdenAVL()
+avl.graficarAVL()
+avl.buscarAVL("casa")
+avl.buscarAVL("dos")
+avl.buscarAVL("hola")
+#avl.buscarAVL("arbol")
+avl.eliminarAVL("casa","txt")
+avl.graficarAVL()
 #**************************************************#
 
 #***************** METODOS  COLA  *****************#
