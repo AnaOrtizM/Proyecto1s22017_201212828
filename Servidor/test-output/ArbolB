@@ -1,0 +1,10 @@
+digraph G { node[shape=record, height=0.1];
+{ 
+p3[label="<f0> -  |<f1> Nombre: hola2 |<f2> -"]; 
+p3:f0 -> p4;
+p4[label="<f0> -  |<f1> Nombre: hola0 |<f2> -|<f3> Nombre: hola1 |<f4> -"]; 
+p3:f2 -> p5;
+p5[label="<f0> -  |<f1> Nombre: hola3 |<f2> -|<f3> Nombre: hola4 |<f4> -|<f5> Nombre: hola5 |<f6> -|<f7> Nombre: hola6 |<f8> -"]; 
+} 
+labelloc="t";
+label=" ARBOL B";}

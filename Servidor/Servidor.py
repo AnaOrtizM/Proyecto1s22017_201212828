@@ -3,12 +3,15 @@ from flask import Flask, request, Response
 #************ IMPORTACIONES DE CLASES *************#
 from ListaCircularDoble.ListaCircularDoble import ListaCircularDoble
 from AVL.AVL import AVL
+from ArbolB.ArbolB import ArbolB
 #**************************************************#
 app = Flask('Proyecto1_Servidor')
 
 #************ INSTANCIAMIENTO DE CLASES ***********#
 lcd = ListaCircularDoble()
 avl = AVL()
+aB = ArbolB()
+
 #**************************************************#
 
 #********** METODOS LISTA CIRCULAR DOBLE **********#
@@ -55,7 +58,7 @@ def graficarLista():
 	return "Lista Graficada" """
 #**************************************************#
 #****************** METODOS AVL *******************#
-avl.insertarAVL("hola","txt")
+'''avl.insertarAVL("hola","txt")
 avl.insertarAVL("arbol","jpg")
 avl.insertarAVL("casa","png")
 avl.insertarAVL("dos","txt")
@@ -66,9 +69,21 @@ avl.buscarAVL("dos")
 avl.buscarAVL("hola")
 #avl.buscarAVL("arbol")
 avl.eliminarAVL("casa","txt")
-avl.graficarAVL()
+avl.graficarAVL()'''
 #**************************************************#
-
+#****************** METODOS ARBOL B *******************#
+aB.ingresar("hola0")
+aB.ingresar("hola1")
+aB.ingresar("hola2")
+aB.ingresar("hola3")
+aB.ingresar("hola4")
+aB.ingresar("hola5")
+aB.ingresar("hola6")
+aB.ingresar("hola7")
+aB.graficarAB()
+aB.eliminarNodo("hola7")
+aB.graficarAB()
+#**************************************************#
 #***************** METODOS  COLA  *****************#
 
 """@app.route('/queueCola',methods=['POST']) 
